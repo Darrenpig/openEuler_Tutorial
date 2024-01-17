@@ -1,0 +1,2 @@
+# openEuler_Tutorial
+openEuler是一个接 CentOS 运营的开源社区，本人小白希望从openEuler中学会很多有意思的东西
