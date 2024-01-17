@@ -3,7 +3,7 @@
 ---
 
 > 操作系统的发展历史
-![计算机的组成图](https://img-blog.csdnimg.cn/d8f865fcfc2a43e8afba92a9e6ae3983.png)
+
 openEuler是一个接CentOS工作的国产服务器操作系统，同时应用场景也在不断地丰富。
 随着国产化的要求不断加大，作为一名能动专业小白，也要<font face="黑体" color="#db5079">接触openEuler操作系统</font>推进应用国产化进程了。
 希望我的读书笔记能帮助的更多人，话不多说，我开始敲了。
