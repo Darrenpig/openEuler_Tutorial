@@ -1,283 +1,98 @@
-# openEuler_Tutorial
-> openEuler是一个接 CentOS 运营的开源社区，DP希望从openEuler中学会很多有意思的东西
+# Euler-junior_NXP
+
+## openEluer Embedded BSP雪球计划
+#### 介绍
+
+> 旨在对南向BSP的覆盖活动，目的是扩大openEuler对南向bsp的支持范围，“[雪球计划](https://gitee.com/openeuler/yocto-meta-openeuler/issues/I90DOU#comment-loadder)”，寓意openEuler将一步步强大，最终成为国内乃至国际顶流嵌入式操作系统
+
+ **本小组研究：NXP** 
+
+![NXP板子](image/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-01%20152323.png)
+## 项目要求
+### 1.软件能合入master
+### 2.基本镜像要能运行                                                                            
+
+
+## 项目成员：  @puai 、@wei-app  、@DarrenPig 
+
+![项目成员](image/Screenshot%202024-02-04%20185515.png)
+### 项目进程：
+
+- 1.30    建立群聊
+- 2.1     sig组会议，创建仓库
+- 2.4     填写报名表
+
+##  资料共享：
+
+- [openEuler Embedded在线文档](https://openeuler.gitee.io/yocto-meta-openeuler/master/introduction/index.html)
+- [SIG的双周议题](https://etherpad.openeuler.org/p/sig-Yocto-meetings)
+- [2.1组会笔记](https://gitee.com/pai_666/euler-junior/tree/master/Files)
+- [MYS-6ulx-io产品手册](https://www.myir-tech.com/down/manual/NXP/MYS-6ulx-iot_product_manual.pdf)
+
+### 个人进度
+
+#### DarrenPig
+- 1.29 ubuntu 的镜像[ubuntu-22.04.3-desktop-amd64] VMware 安装, [shell环境学习](https://blog.csdn.net/cnds123/article/details/107427030)
+- 1.30 啃 yocto 的文档，本地部署[~/.bashrc-Linux环境变量](https://zhuanlan.zhihu.com/p/359354934)（Day 1）
+- 1.31 bitbake、[vim](https://www.runoob.com/linux/linux-vim.html)、poky（Day 2）
+- 2.1  [Yocto部署笔记](https://gitee.com/pai_666/euler-junior/blob/master/Files/1.31Ubuntu%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8FShell%E3%80%81vim.pdf)、sig组会（Day 3）
+- 2.3  code、SSH到Ubuntu环境
+- 2.4  [报名表](https://gitee.com/openeuler/yocto-meta-openeuler/issues/I90DOU#comment-loadder)、Yocto文档到构建
+##### 目标：本周六`2.3`之前完成Yocto部署
+
+##### -[x]  SSH隧穿VM上的Ubuntu的Shell会不会更方便一些？  
+
+
+#### 大家可以在这补充...
+
+
 ---
-
-> 操作系统的发展历史
-
-openEuler是一个接CentOS工作的国产服务器操作系统，同时应用场景也在不断地丰富。
-随着国产化的要求不断加大，作为一名能动专业小白，也要<font face="黑体" color="#db5079">接触openEuler操作系统</font>推进应用国产化进程了。
-希望我的读书笔记能帮助的更多人，话不多说，我开始敲了。
-# 操作系统的发展历史
-在这一节我用一了个下午的时间来初读，还是感触不少。
-
-操作系统的产生与硬件系统的发展息息相关，随着计算机系统的技术发展不断的完善。为了更好的阐释，我们要先来了解操作系统的发展史。
-
-## 手工操作时代
-1946-1955，诞生了以ENIAC为代表的第一代计算机。
-
-> 世界上第一台通用计算机“ENIAC”在美国宾夕法尼亚大学诞生。发明人是美国人莫克利（JohnW.Mauchly）和艾克特（J.PresperEckert）。
-
-第一代计算机主要由真空管构成，计算速度慢，无操作系统，直接使用机器语言与硬件打交道。将程序与数据记录在纸带、卡片等介质上，通过输入设备（如纸带、卡片阅读机）载入计算机。然后通过控制台开关启动程序运行。计算完毕后输出计算结果，用户取走卸下纸带或者卡片。在手工操作时代，用户使用计算机都是预约制，当第一个用户使用计算机时，将独占全部的计算机资源，并在其使用完毕后根据预约时间，安排第二个用户使用。
-  ```mermaid 
-graph TD  
-  A["将程序与数据记录在介质上"]  
-  B["通过输入设备载入计算机"]  
-  C["通过控制台开关启动程序运行"]  
-  D["计算完毕后输出计算结果"]  
-  E["用户取走卸下纸带或者卡片"]  
-  A-->B  
-  B-->C  
-  C-->D  
-  D-->E
-  style A fill:#399AA2, stroke:#db5079
-  style B fill:#399AA2, stroke:#1E5155
-  style C fill:#399AA2, stroke:#399AA2
-  style D fill:#db5079, stroke:#db5079
-  style E fill:#399AA2, stroke:#db5079
-
-  ```
-
-在这个阶段，计算机对任务的处理为串行处理，计算效率极为低下。
-
-## 批处理系统
-
-20世纪，50年代，晶体管的出现极大的推动了计算机的计算性能和可靠性。
-手工操作的低速和计算机的高速形成矛盾，唯一的解决方案是告别传统的人手操作，实现作业的自动过渡。在这种情况下，批处理系统出现了。
-在批处理时代，程序员不再直接操作机器，配置了专门的计算机操作员来减少机器的错误。同时操作员将用户提交的作业进行批组合，编成作业执行序列，在送入计算机中进行处理。这种批处理方式称为<font face="黑体" color="#db5079">联机批处理</font>，实现了作业的自动转接，减少了总耗时中人工输入等待的时间。但在作业输入和输出过程中，CPU仍处在等待状态，资源利用率有待提升。
-
-> 批处理系统是一种计算机操作系统，用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。这种采用批量处理作业技术的操作系统称为批处理操作系统。它分为单道批处理系统和多道批处理系统，不具有交互性。
-
-因此在批处理系统时代的后期，为解决高速主机与慢速外设之间的矛盾，以及提高CPU的利用率，出现了脱机批处理方式。
-
-<font face="黑体" color="#db5079">相较于联机批处理方式，脱机批处理增加了一台不与主机直连而与I/O设备打交道的卫星机。</font>
-
-卫星机从输入机（如卡牌机）上读取用户作业并放到输入带上，并从输出带上读取输出执行结果并传输给输出机（如打印机），有效的缓解了主机和设备之间的矛盾。
-
-主机和卫星机并行工作，提高了计算机系统的效率，充分发挥了主机的高速计算能力。
-
-![脱机批处理系统模型](https://img-blog.csdnimg.cn/fecee22ade274a299f78282612c27b74.png)
-
-脱机批处理，也促进了<font face="黑体" color="#db5079">监督程序</font>的产生。监督程序及批处理时代的操作系统，拥有现代操作系统的部分功能。负责装入和运行各种系统处理程序，如汇编程序、编译程序、连接装配程序和程序库（如I/O标准程序）等，帮助完成程序自动过渡。在计算机操作史上，<font face="黑体" color="#db5079">第一个可称为操作系统的软件GeneralMotors就是这个时间研究出来的</font>。其他有代表性的操作系统是FORTRAN监督系统（FMS）和IBSYS。
-
-
-## 多道程序系统
-多道程序系统是在计算机内存中同时存放几道相互独立的程序，使它们在管理程序控制下，相互穿插运行，两个或两个以上程序在计算机系统中同处于开始到结束之间的状态，这些程序共享计算机系统资源。
-
-> 与之相对应的是单道程序，即在计算机内存中只允许一个的程序运行。对于一个单CPU系统来说，程序同时处于运行状态只是一种宏观上的概念，他们虽然都已经开始运行，但就微观而言，任意时刻，CPU上运行的程序只有一个。
-
-<font face="黑体" color="#db5079">多道程序系统是指将多个独立作业同时加载进入内存</font>，操作系统根据一定的规则，调度作业在CPU上交替运行，共享了计算机资源。E.g.:某作业在等待I/O时，操作系统能调度另一程序进入CPU。多道程序系统的产生，使操作系统<font face="黑体" color="#db5079">开始具备现代操作系统的基本雏形</font>。
-![多道程序系统工作调度示意图](https://img-blog.csdnimg.cn/1ef9ea934c2f4465b4dbd2d3c9444d0e.png#pic_center)
-
-## 分时操作系统
-
-### CTSS
-
-CTSS（相容分时系统）是美国麻省理工学院计算机中心在1961年首次进行示范运作的，并在1962年发表了相关论文。它是最早的分时操作系统，一直运作到1963年为止。麻省理工学院的MAC计划拥有它的第二份拷贝，它只在这两个地方运作过。
-
-> CTSS是一个分时系统，它的主要特点是可以让多个用户同时使用同一台计算机，并且每个用户都可以独立进行操作，互不影响。
-
-### MULTICS的历史
-MULTICS是**1964年由贝尔实验室、麻省理工学院及美国通用电气公司所共同参与研发的**，是一套安装在大型主机上多人多任务的操作系统，它以Compatible Time-Sharing System（CTSS）做基础，建置在美国通用电力公司的大型机GE-645，目的是连接1000部终端机，支持300的用户同时在线。然而，由于计划进度落后，资金短缺，MULTICS计划在1969年宣告失败，贝尔实验室也退出了此计划。在MULTICS计划停止后，由贝尔实验室的两位软件工程师Thompson与Ritchie以C语言为基础而发展出UNIX。
-### UNIX和Linux的历史
-UNIX的发展历史可以追溯到1965年，美国麻省理工学院（MIT）、通用电气公司（GE）及AT&T的贝尔实验室联合开发了Multics工程计划，其目标是开发一种交互式的具有多道程序处理能力的分时操作系统，但因Multics追求的目标过于庞大复杂，项目进度远远落后于计划，最后贝尔实验室宣布退出。
-
-1969年，美国贝尔实验室的肯·汤普森在DECPDP-7机器上开发出了UNIX系统。
-
-1971年，肯·汤普森的同事丹尼斯·里奇发明了C语言。
-
-1973年，UNIX系统的绝大部分源代码用C语言重写，这为提高UNIX系统的可移植性打下基础。
-
-至于Linux，它诞生于1991年，由芬兰大学生李纳斯（Linus Torvalds）和后来陆续加入的众多爱好者共同开发完成。Linux是自由软件，源代码开放的UNIX。
-
-上游社区：
-[Linux社区链接：https://www.linux.org/pages/download/](https://www.linux.org/pages/download/)
-
-<font face="黑体" color="#db5079">流行的Linux发行版比较：
-</font>
-
-#### Debian系列
-
-1. Debian是最早的Linux发行版之一，以稳定性著称。它有一个强大的社区支持，这意味着用户可以找到大量的教程和资源来解决他们可能遇到的问题。此外，Debian有大量的软件包可供选择，可以满足各种需求。
-2. Ubuntu是Debian的派生版本，非常适合初学者。它继承了Debian的稳定性和易用性，但在软件包上更丰富，也更适合现代用户。Ubuntu有着强大的社区支持和持续的技术更新，使其始终保持前沿地位。
-3. Mint是另一个基于Debian的发行版，用户界面友好，适合初学者使用。它包含了一些专有软件，这可能会使得某些开发者或企业有所顾虑。
-
-[Debian社区链接：https://www.debian.org/](https://www.debian.org/)
-#### Red Hat系列
-
-1. Red Hat可能是最著名的Linux版本，能向用户提供一套完整到位的服务支持，特别适合在公共网络环境中使用。Red Hat拥有众多的程序包，使其具有高度的灵活性和定制性。
-2. CentOS是Red Hat的派生版本，以Red Hat Enterprise Linux为基础的一个免费操作系统，适合企业服务器和网络设备使用。它同样拥有强大的社区支持和丰富的软件包。
-3. Fedora是Red Hat公司支持的社区项目，是一个快速、稳定、有创新力的Linux系统。Fedora往往能最先采用新的技术和创新，这使得它在一些需要最新技术的场景下有很高的价值。
-
-[Red Hat社区链接：https://www.redhat.com/en](https://www.redhat.com/en)
-
-如果你需要一个稳定且有着广泛支持的发行版，Debian可能是一个好选择。而如果你更看重创新和技术前沿，Red Hat可能更适合你。
-
-  ```mermaid 
-graph TD  
-    A[Red Hat]  
-    B[提供一套完整到位的服务支持]  
-    C[公共网络环境]  
-    D[高度灵活性和定制性]  
-    E[CentOS]  
-    F[Red Hat Enterprise Linux]  
-    G[企业服务器和网络设备]  
-    H[强大的社区支持]  
-    I[丰富的软件包]  
-    J[Fedora]  
-    K[快速稳定有创新力]  
-    L[最先采用新的技术和创新]  
-    M[需要最新技术的场景]  
-    A --> B  
-    A --> C  
-    A --> D  
-    E --> F  
-    E --> G  
-    E --> H  
-    E --> I  
-    J --> K  
-    J --> L  
-    L --> M
-    style A fill:#399AA2, stroke:#db5079
-  style E fill:#399AA2, stroke:#1E5155
-  style J fill:#399AA2, stroke:#399AA2
-  style B fill:#db5079, stroke:#db5079
-  style C fill:#db5079, stroke:#db5079
-  style D fill:#db5079, stroke:#db5079
-  style K  fill:#db5079, stroke:#db5079
-  style L fill:#db5079, stroke:#db5079
-  style M fill:#db5079, stroke:#db5079
-
-  ```
-### DOS和Windows的历史
-#### DOS的历史：
-
-1. <font face="黑体" color="#db5079">DOS（Disk Operating System）磁盘操作系统</font>，是由美国Microsoft（微软）公司在1979年为IBM-PC系列机开发的一个单用户、单任务的16位字符界面操作系统。
-2. 由于DOS系统是微软公司为<font face="黑体" color="#db5079">IBM的个人电脑开发</font>的，称为MS-DOS，因此后来其他公司生产的与MS-DOS兼容的操作系统也沿用了这个称呼，如PC-DOS、DR-DOS等。
-3. DOS在1985年到1995年及其后的一段时间内占据操作系统的统治地位。
-4. 最著名和广泛使用的DOS系统从1981年直到1995年的15年间微软在推出Windows 95之后，宣布MS-DOS不再单独发布新版本，不过FreeDOS等与MS-DOS兼容的DOS则在继续发展着。
-
-#### Windows的历史：
-
-1. Windows操作系统是由微软开发的图形界面操作系统。<font face="黑体" color="#db5079">第一版Windows系统由微软于1985年发布，该系统基于麦金塔系统开发</font>。
-2. Windows系统经过不断发展，逐渐成为了个人计算机的主流操作系统，并且成为了许多其他计算机平台的标准操作系统。
-3. Windows系统的普及度不断提高，成为了一个全球性的计算机现象。随着时间的推移，Windows系统的版本不断升级，功能也不断增强和完善。
-4. 目前，Windows系统已经成为了一个庞大的商业生态系统，拥有<font face="黑体" color="#db5079">数亿用户和数百万开发者</font>。
-
-Windows开发者社区链接：[https://developer.microsoft.com/zh-cn/windows/](https://developer.microsoft.com/zh-cn/windows/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5c093f244ae0409faea9f738b42a6930.png#pic_center)
-
-### Android和iOS的历史
-随着移动终端的普遍流行，面向移动终端的操作系统有不少，如<font face="黑体" color="#db5079">Android、iOS、Windows Phone、BlackBerry OS。</font>
-但最为主流的还是Android和iOS，二者的发展历史如下：
-
-#### Android：
-
-* 2002年，安迪·鲁滨开始研发Android设备。
-* 2005年，Google收购了Android，并开始与硬件制造商合作开发基于Android的智能手机。
-* 2007年，iOS发布了1.0版本，包含：全面屏、浏览器、map（GoogleMap）、iTunes等功能。
-* 2008年，Android发布了1.0版本，第一台Android手机HTC Dream AndroidMarket、键盘操作。
-* 2009年，Android发布了1.5（蛋糕）版本，支持虚拟键盘。
-* 2010年，iOS发布了3.3版本，为了支持iPad；Android发布了2.2版本支持储蓄卡、系统优化明显。
-* 2011年，Android发布了3.0（蜂巢）版本，只支持Pad，4.0重新整合可运行在Pad和手机上 。
-* 2013年，iOS发布了7.0版本，支持指纹解锁，UI扁平化风格。
-* 2014年，Android发布了5.0（棒棒糖）版本，使用ART虚拟机。
-* 2014第一季度Android平台已占所有移动广告流量来源的42.8%，首度超越iOS。但运营收入不及iOS。
-* 2015年，网络安全公司Zimperium研究人员警告，安卓(Android)存在“致命”安全漏洞,黑客发送一封彩信便能在用户毫不知情的情况下完全控制手机
-* 2018年10月，谷歌表示，将于2018年12月6日停止Android系统中的Nearby Notifications（附近通知）服务，因为Android用户收到太多的附近商家推销信息的垃圾邮件 
-* 2020年3月，谷歌的Android安全公告中提到，新更新已经提供了CVE-2020-0069补丁来解决针对联发科芯片的一个严重安全漏洞 
-* 2022年2月，Android 12L Beta 3 版本发布，首次支持了 Pixel 6 和 Pixel 6 Pro，以及更新的测试环境、缺陷修复和优化
-* 2022年2月，谷歌宣布推出Android隐私沙盒，旨在引入更新、更具私密性的广告解决方案，以限制与第三方机构共享用户信息，但不损害广告主短期利益。
-* 2022年3月27日消息，据俄罗斯卫星通讯社报道，由于受到美国制裁，谷歌已经停止认证运行Android系统的俄罗斯BQ公司的智能手机，该公司将转向使用中国华为公司打造的鸿蒙系统。
-* 2022年，安卓推出类似灵动岛的App——dynamicSpot。以及宣布安卓和 Chrome 浏览器带来初步的 Passkey 通行密钥支持。 
-* 2023年4月4日，谷歌发布 2023 年 4 月的安卓安全公告。谷歌和以往一样，发布了两个补丁级别，其中 2023-04-01 针对安卓系统和框架，而 2023-04-05 级别包含厂商的安全修复补丁。
-
-安卓开发者社区链接：[https://developer.android.google.cn/?hl=zh-cn](https://developer.android.google.cn/?hl=zh-cn)
-![安卓开发者社区](https://img-blog.csdnimg.cn/5d50105e45d547118c2aa31849d5d0c7.png#pic_center)
-#### iOS：
-
-* 2007年，iOS发布了1.0版本，包含：全面屏、浏览器、map（GoogleMap）、iTunes等功能。
-* 2008年，iOS发布了2.0版本，增加了App Store应用商店和支持GPS等功能。
-* 2009年，iOS发布了3.0版本，增加了复制粘贴、MMS、语音备忘录等功能。
-* 2010年，iOS发布了4.0版本，增加了多任务处理、FaceTime视频通话、iBooks等功能。
-* 2011年，iOS发布了5.0版本，增加了通知中心、iCloud、Siri等功能。
-* 2012年，iOS发布了6.0版本，增加了苹果地图、Passbook等功能。
-* 2013年，iOS发布了7.0版本，重新设计了界面，增加了控制中心、AirDrop、iTunes Radio等功能。
-* 2014年，iOS发布了8.0版本，增加了扩展、手势识别、iCloud Drive等功能。
-* 2016年，iOS发布了10.0版本，增加了消息、语音邮件等功能。
-* 2018年9月22日，美国苹果公司在最新的操作系统中秘密加入了基于iPhone用户和该公司其他设备使用者的“信任评级”功能。
-* 2021年11月17日消息，据报道，苹果iOS 15.2 Beta泄露全新“SportsKit”框架
-* 2022年1月28日，苹果向 iPhone 和 iPad 用户推送了 iOS / iPadOS 15.4 开发者预览版Beta更新（内部版本号：19E5209h），本次更新距离上次发布隔了 2 周时间，带来了 Universal Control 全局控制、全新的 emoji 表情、苹果钱包 Apple Card 小部件等新功能。 
-* 2023年6月6日，苹果于2023苹果全球开发者大会发布iOS17，支持Contact Posters通讯海报、live voicemail、Face time和信息功能更新、短信新增贴纸功能、Name Drop、精准键入自动校正、全新笔记APP、待机等功能。
-
-iOS开发者社区链接：[https://developer.apple.com/cn/](https://developer.apple.com/cn/)
-![iOS开发者社区链接](https://img-blog.csdnimg.cn/58eb6e933fb8437c84bb8bb60f5a2a15.png#pic_center)
-
-
-
-以上就是Android和iOS的历史发展过程。
-
-### 鸿蒙
-华为鸿蒙系统（HUAWEI Harmony OS），是华为公司在2019年8月9日于东莞举行的华为开发者大会（HDC.2019）上正式发布的操作系统。
-
-* 2020年9月10日，华为鸿蒙系统升级至HarmonyOS 2.0版本。2021年4月22日，华为鸿蒙 HarmonyOS 应用开发在线体验网站上线  。5月18日，华为宣布华为HiLink将与Harmony OS统一为鸿蒙智联  。
-* 2021年6月2日晚，华为正式发布HarmonyOS 2及多款搭载HarmonyOS 2的新产品  。7月29日，华为Sound X音箱发布，是首款搭载HarmonyOS 2的智能音箱 。
-* 2021年10月，华为宣布搭载鸿蒙设备破1.5亿台。 [54] 鸿蒙 HarmonyOS 座舱汽车2021年底发布。
-* 2021年11月17日，HarmonyOS迎来第三批开源，新增开源组件769个，涉及工具、网络、文件数据、UI、框架、动画图形及音视频7大类。
-* 2023年8月4日，华为鸿蒙4（HarmonyOS 4）操作系统正式发布。华为鸿蒙Next（HarmonyOS Next）操作系统开发者预览版(Developer Preview)发布。
-
-开发者社区链接：[https://developer.harmonyos.com/cn/community/](https://developer.harmonyos.com/cn/community/)
-![开发者社区截图](https://img-blog.csdnimg.cn/6fa65caf63cf42f1b961960f5883eca2.png#pic_center)
-
-## 实时操作系统
-
-随着计算机的飞速发展，操作系统也开始进入工业过程控制和军事实时控制等领域，这些领域对业务处理的实时性有着极高的要求。
-
-由于多道程序系统和分时程序系统有让人满意的资源利用率和系统响应时间，却不能满足实时业务领域的业务处理需求。
-
-实时操作系统RTOS（Real-Time operation System）是指能保证一定时间内完成特定功能的操作系统。
-
-> 实时操作系统的主要特征包括什么？
-
-实时操作系统的主要特征包括：
-
-```bash
-1. 及时性：实时操作系统应能在确定的时间内对外部事件作出响应，并能在规定时间内完成对事件的响应处理。
-2. 可靠性：实时操作系统应具有高可靠性，能在各种可能发生的环境中稳定运行，并具有错误处理和恢复能力。
-3. 可预测性：实时操作系统应能提供可预测的执行时间，以便支持实时应用程序和任务。
-4. 扩展性：实时操作系统应能支持各种硬件平台和应用场景，并可通过扩展和定制来满足特定需求。
-5. 交互性：实时操作系统应提供良好的用户界面和交互性，使用户能够方便地控制和管理系统资源。
-6. 多任务性：实时操作系统应能同时执行多个任务和进程，并能优先处理关键任务，以确保实时性的要求。
-7. 可定制性：实时操作系统应能根据应用需求进行定制和扩展，以支持特定的实时任务和系统功能。
-8. 资源管理：实时操作系统应能有效地管理资源，以确保资源的公平分配和系统性能的最优。
-```
-
-这些特征使得实时操作系统在现代化应用中得到广泛应用，例如自动化制造、医疗设备、航空航天、交通运输等领域。
-
-
-  ```mermaid 
-graph LR  
-    A[实时操作系统] --> B[及时性]  
-    A --> C[可靠性]  
-    A --> D[可预测性]  
-    A --> E[扩展性]  
-    A --> F[交互性]  
-    A --> G[多任务性]  
-    A --> H[可定制性]  
-    A --> I[资源管理]  
-    B --> J[外部事件]  
-    C --> K[稳定运行]  
-    D --> L[提供可预测的执行时间]  
-    E --> M[支持各种硬件平台和应用场景]  
-    F --> N[提供良好的用户界面和交互性]  
-    G --> O[同时执行多个任务和进程]  
-    H --> P[根据应用需求进行定制和扩展]  
-    I --> Q[有效地管理资源]
-  ```
-移动端的操作系统支持的功能也越来越多:
-iPhone 15 支持Thread开源协议
-P60 支持HarmonyOS智能互联
+## 最近活动：2.1SIG组会
+有关摘要：
+
+ **openEuler/yocto-meta-openEuler
+双周例会：** 
+### 一、近期进展
+- isula=》systemd解耦
+			==〉host OS / 容器OS
+					（容器相关的生态需求支持）
+- openEuler==以前——包dnf——数据源不同源==》服务器端的数据
+- 希望未来以image镜像为载体～容器为载体|通过rpm包更多向image发展
+- oe-build——>图形化选择
+- bsp雪球计划
+### 二、isula基本使用
+Embedded——》OSI容器引擎
+				==〉CLI、CRI管理操作接口
+- oe-build构建标准镜像
+- isula容器引擎
+#Step 1
+- NAT模式	网桥（默认网关）
+- 虚拟机OS（局域网）
 ......
 
-![DP的操作系统概图](https://img-blog.csdnimg.cn/5de23734d0144760a073abbdb055b9ee.png)
-'`就这样啦，上游社区带动了很多下游社区的发展，无论在移动端、PC端、服务器端，操作系统都在不断发展，作为笔者作为小白很好奇、很仰慕，这么多的社区，这么多的前辈开发者，开发同行们，抑或是和我一样的开发者小白，欢迎大家来到这个操作系统组成的计算机世界！`
+### 三、【重点】 **雪球计划 南向bsp**  支持范围（bsp-都有环境==〉yocto）
+Soc支持， **米尔科技** 赞助：选择硬件板子——》issues统计Gitee ID
+- ——〉可以传递）
+-  **雪球计划——〉预计持续到5月** 
+## 项目要求：
+### - 合入  master  主线——〉代码
+### - 基本镜像可以运行 ——〉硬件
 
+- [ ] 版本，内核（不一定统一的要求下）==〉先满足上述两个要求。
+
+
+## 维护日志：2.1 @DarrenPig Readme、两份笔记(vim环境变量、2.1组会笔记)
+## 维护日志：2.4 @DarrenPig Readme 报名信息
+2.
+![已有文件](image/image.png)
+---
+
+## P.S.:好玩的文档
+社区文档（sphinx）怎么编译
+
+```
+sudo apt-get install python3-sphinx
+pip3 install sphinx_rtd_theme sphinx_multiversion sphinx_tabs -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+装上sphinx环境，去拉社区文档仓（docs），就可以make html，生成文档了
+1.30 @puai 
