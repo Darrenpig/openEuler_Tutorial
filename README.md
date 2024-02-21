@@ -1,3 +1,18 @@
+## My Tutorial notes when I take the openEuler.org Readme.
+
+![image](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/c4cb7618-2174-47a6-96d0-04d4014d4acb)
+
+
+
+
+
+
+
+
+
+
+
+
 # Euler-junior_NXP
 
 ## openEluer Embedded BSP雪球计划
