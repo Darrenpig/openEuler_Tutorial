@@ -1,4 +1,5 @@
-# Nearlink
+# Nearlink EB25开发仓
+![输入图片说明](image/EB25.png)
 
 #### 介绍
 常工院的一个Nearlink兴趣小组，想在openEuler\Rt-Thread上混合编译Nearlink接口，达到有即插即用的Nearlink硬件目的
