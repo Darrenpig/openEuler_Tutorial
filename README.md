@@ -3,10 +3,11 @@
 
 
 #### 介绍
-常工院的一个Nearlink兴趣小组，想在openEuler\Rt-Thread上混合编译Nearlink接口，达到有即插即用的Nearlink硬件目的
+![输入图片说明](image/Nearlink.png)
+常工院的一个[Nearlink](https://www.hisilicon.com/cn/techtalk/nearlink)兴趣小组，想在openEuler\Rt-Thread上混合编译Nearlink接口，达到有即插即用的Nearlink硬件目的
 
 
-## 我们的主要利用这个仓库的方式：更新readme
+## 我们的主要利用[这个仓库](https://gitee.com/darrenpig/openeuler-nearlink)的方式：更新readme
 
 
 #### 项目结构说明
@@ -31,18 +32,22 @@
 ### 个人进度
 
 ####  @DarrenPig 
-3.24 建立仓库，维护Readme
+3.24 建立[仓库](https://gitee.com/darrenpig/openeuler-nearlink)，维护Readme
 
 ####  @徐逸凡 
 3.25 拿板子
 
+####  @徐欣晨 
+3.24 预组会讨论
+
 ---
 ## 维护记录：
 #### 3.24 @DarrenPig 建仓Readme，传文档
-
+## 组会记录：
+#### 2.24 图书馆二楼
 ---
 
-### Way to use
+### Way to use 修改Readme方法：
 ![输入图片说明](image/gongxian.png)
 ![输入图片说明](image/duibitu.png)
 
