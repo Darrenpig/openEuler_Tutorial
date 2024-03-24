@@ -3,6 +3,10 @@
 #### 介绍
 常工院的一个Nearlink兴趣小组，想在openEuler\Rt-Thread上混合编译Nearlink接口，达到有即插即用的Nearlink硬件目的
 
+
+## 我们的主要利用这个仓库的方式：更新readme
+
+
 #### 项目结构说明
 我们能用Gitee做啥子？
 共享文件、项目进度
@@ -14,23 +18,17 @@
 ## 网址：https://lierda.feishu.cn/wiki/X360wInOjihWzukypNzc0Df5nHf?utm_source=pocket_saves
 
 #### 项目进度
-1.  3.25正式成立项目
-2.  xxxx
-3.  xxxx
+1.  3.25(明天)正式成立项目
 
-#### 项目成员
+#### 项目成员：朱**、*逸凡、徐**，老闻（大佬）
 
-1.  
-2.  
-3.  
-4.  
+### 个人进度
+
+#### DarrenPig
+3.24 建立仓库，维护Readme
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+---
+## 维护记录：
+#### 3.24 @DarrenPig 建仓Readme
