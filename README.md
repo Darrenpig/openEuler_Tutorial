@@ -26,7 +26,7 @@
 #### 项目进度
 1.  3.25(明天)正式成立项目
 
-#### 项目成员： @DarrenPig 、 @徐逸凡 、徐**， @和尚 （大佬）
+#### 项目成员： @DarrenPig 、 @徐逸凡 、 @徐欣晨 ， @和尚 （大佬）
 
 ### 个人进度
 
@@ -39,6 +39,11 @@
 ---
 ## 维护记录：
 #### 3.24 @DarrenPig 建仓Readme，传文档
+
+---
+
+### Way to use
+![输入图片说明](image/gongxian.png)
 ![输入图片说明](image/duibitu.png)
 
 Image by <a href="https://www.freepik.com/free-psd/flat-design-plant-shop-template_40201855.htm#&position=26&from_view=author&uuid=eb059247-9847-433e-a0fe-1d7692fcd229">Freepik</a>
