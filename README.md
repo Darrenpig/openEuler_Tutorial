@@ -1,4 +1,5 @@
 # Nearlink EB25 SIG
+### 以下是大家可以轻松编辑交流的文档区：（提交方法在Readme结尾~~~）
 ![xiangmujiegou](image/Tree.png)
 
 
@@ -52,3 +53,4 @@
 ![输入图片说明](image/duibitu.png)
 
 Image by <a href="https://www.freepik.com/free-psd/flat-design-plant-shop-template_40201855.htm#&position=26&from_view=author&uuid=eb059247-9847-433e-a0fe-1d7692fcd229">Freepik</a>
+![输入图片说明](image/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F.gif)
