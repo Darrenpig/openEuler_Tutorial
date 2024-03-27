@@ -1,4 +1,6 @@
 ## My Tutorial notes when I take the openEuler.org Readme.
+前期主要以一些文档的只是为主，然后通过一些Lunix相关的书做过一些尝试：
+### 也就这样了
 
 ![image](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/c4cb7618-2174-47a6-96d0-04d4014d4acb)
 
@@ -13,6 +15,8 @@
 
 
 
+下面是做的镜像仓
+---
 # Euler-junior_NXP
 
 ## openEluer Embedded BSP雪球计划
