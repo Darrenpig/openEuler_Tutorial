@@ -4,7 +4,7 @@
 ![输入图片说明](image/ROS%E5%B9%B3%E5%8F%B0.png)
  @和尚 【ROS开发板】https://www.yahboom.com/study/ROS-Driver-Board
 ![xiangmujiegou](image/Tree.png)
-
+![输入图片说明](image/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.png)
 
 #### 介绍
 ![输入图片说明](image/Nearlink.png)
@@ -49,6 +49,8 @@
 #### 3.24 @DarrenPig 建仓Readme，传文档
 ## 组会记录：
 #### 2.24 图书馆二楼
+
+#### 4.17 @DarrenPig 更新Readme,跟进进度
 ---
 
 ### Way to use 修改Readme方法：
