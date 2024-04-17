@@ -38,6 +38,9 @@
 ####  @DarrenPig 
 3.24 建立[仓库](https://gitee.com/darrenpig/openeuler-nearlink)，维护Readme
 3.25 队友组织，相关文档的推送。
+4.17 我的本地环境https://mp.weixin.qq.com/s/rg3NYJRQcsNliDUJerOzuw这个方式装的
+
+
 ####  @徐逸凡 
 3.25 拿板子
 
