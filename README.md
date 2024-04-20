@@ -1,4 +1,11 @@
 # Nearlink EB25 SIG
+目前仓库的现状是：
+---
+ @和尚 ROS，PWM； @徐逸凡 硬件； @徐欣晨 文档维护
+---
+
+
+
 # https://lierda.feishu.cn/wiki/VBoPwV3oRiJRjWkb1ZkcgVMynmg
 ### 以下是大家可以轻松编辑交流的文档区：（提交方法在Readme结尾~~~）
 ![输入图片说明](image/ROS%E5%B9%B3%E5%8F%B0.png)
