@@ -12,18 +12,31 @@
 ### 项目成员分工:
  @和尚 ROS，PWM； @徐逸凡 硬件； @徐欣晨 文档维护
 ---
+<table>
+    <tr>
+      <td ><img src="image/ROS%E5%B9%B3%E5%8F%B0.png" width=200/>
+      <td ><img src="image/Tree.png" width=200/>
+      <td ><img src="image/%E5%AE%98%E6%96%B9%E7%9A%84%E8%B5%84%E6%96%99%E5%8C%85%E6%88%AA%E5%9B%BE.png" width=200/>
+      <td ><img src="image/FAQ%E6%88%AA%E5%9B%BE.png" width=200/>
+    </tr>
 
-
+   <tr>  
+      <td ><img src="image/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.png" width=200/>
+      <td ><img src="image/Nearlink.png" width=200/>
+      <td ><img src="image/SegonUIScript%20%20aim.png" width=200/>
+      <td ><img src="image/duibitu.png" width=200/>
+   
+    </tr>
+</table>
 
 # https://lierda.feishu.cn/wiki/VBoPwV3oRiJRjWkb1ZkcgVMynmg
 ### 以下是大家可以轻松编辑交流的文档区：（提交方法在Readme结尾~~~）
-![输入图片说明](image/ROS%E5%B9%B3%E5%8F%B0.png)
+
  @和尚 【ROS开发板】https://www.yahboom.com/study/ROS-Driver-Board
-![xiangmujiegou](image/Tree.png)
-![输入图片说明](image/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.png)
+
 
 #### 介绍
-![输入图片说明](image/Nearlink.png)
+
 常工院的一个[Nearlink](https://www.hisilicon.com/cn/techtalk/nearlink)兴趣小组，想在openEuler\Rt-Thread上混合编译Nearlink接口，达到有即插即用的Nearlink硬件目的
 
 
@@ -34,16 +47,15 @@
 我们能用Gitee做啥子？
 共享文件、项目进度
 
-![输入图片说明](image/SegonUIScript%20%20aim.png)
 
 
 #### 资料共享
 
 ##### 1.使用手册：https://lierda.feishu.cn/wiki/VBoPwV3oRiJRjWkb1ZkcgVMynmg
 
-![官方的资料包截图](image/%E5%AE%98%E6%96%B9%E7%9A%84%E8%B5%84%E6%96%99%E5%8C%85%E6%88%AA%E5%9B%BE.png)
+
 ##### 2.网址：https://lierda.feishu.cn/wiki/X360wInOjihWzukypNzc0Df5nHf?utm_source=pocket_saves
-![输入图片说明](image/FAQ%E6%88%AA%E5%9B%BE.png)
+
 #### 项目进度
 1.  3.25(明天)正式成立项目
 
@@ -57,24 +69,20 @@
 4.17 我的本地环境https://mp.weixin.qq.com/s/rg3NYJRQcsNliDUJerOzuw这个方式装的
 
 
-####  @徐逸凡 
-3.25 拿板子
-
-####  @徐欣晨 
+####  @徐逸凡 @徐欣晨 
+3.25 拿板子 
 3.24 预组会讨论
+
 
 ---
 ## 维护记录：
 #### 3.24 @DarrenPig 建仓Readme，传文档
-## 组会记录：
+## 项目进度：
 #### 2.24 图书馆二楼
-
-#### 4.17 @DarrenPig 更新Readme,跟进进度
+#### 4.17 @ DarrenPig 更新Readme,跟进进度
+#### 4.20 @ DarrenPig 图书馆二楼，检查电机，调整开发板环境
+#### 4.21 @ 和尚 板子上电成功
 ---
 
-### Way to use 修改Readme方法：
-![输入图片说明](image/gongxian.png)
-![输入图片说明](image/duibitu.png)
-
-Image by <a href="https://www.freepik.com/free-psd/flat-design-plant-shop-template_40201855.htm#&position=26&from_view=author&uuid=eb059247-9847-433e-a0fe-1d7692fcd229">Freepik</a>
-![输入图片说明](image/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F.gif)
+###### @所有人 修改Readme方法：
+>>> ![修改方式](image/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F.gif)
