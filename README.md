@@ -2,6 +2,14 @@
 ---
 目前仓库的现状是：
 ---
+### 成员的空余时间表：
+
+![image](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/62ed178a-f259-4b1c-b8f7-0bbb3c05b174)
+
+
+这就是近期的大体分工
+
+### 项目成员分工:
  @和尚 ROS，PWM； @徐逸凡 硬件； @徐欣晨 文档维护
 ---
 
