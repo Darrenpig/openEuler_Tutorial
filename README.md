@@ -64,8 +64,6 @@
 
 ##### 2.网址：https://lierda.feishu.cn/wiki/X360wInOjihWzukypNzc0Df5nHf?utm_source=pocket_saves
 
-#### 项目进度
-1.  3.25(明天)正式成立项目
 
 #### 项目成员： @DarrenPig 、 @徐逸凡 、 @徐欣晨 ， @和尚 （大佬）
 
