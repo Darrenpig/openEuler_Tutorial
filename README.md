@@ -6,6 +6,8 @@
 项目整体思路：
 - 1.造车
 - - 上电机 520编码电机
+  - ![image](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/62b46ed8-4464-4a9b-aa0e-d1d0f15ce620)
+
 - 2.通讯模块
 - - EB25
 - 3.供电电源
