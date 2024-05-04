@@ -97,7 +97,9 @@
 #### 4.22 @ 和尚 换板子 国信长天Cortex-M4、@ 徐欣晨 Matlab 公式、竞赛交流
 #### 4.28 @ 和尚 12V电池已到、ROS拓展板直接做电机驱动，记得封装好函数  @徐逸凡 @徐欣晨 底盘已到记得即使搞定固定与喷涂 
 #### 5.2  @ DarrenPig 今天必须开始 imx 8 的SDK编译烧录了， @徐逸凡  有材料可以先涂
+#### 5.4  @ DarrenPig 建模完成
 ---
+![视觉光伏巡检小车设计图](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/f3f688b9-d659-460e-a941-87d504e2701e)
 
 ###### @所有人 修改Readme方法：
 >>> ![修改方式](image/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8A%A0%E9%80%9F.gif)
