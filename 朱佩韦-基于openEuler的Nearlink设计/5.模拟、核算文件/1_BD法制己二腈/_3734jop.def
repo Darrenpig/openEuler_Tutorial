@@ -1,0 +1,11 @@
+SLAVE:
+INPUT: _3734jop.inm
+MODNAME: apmain
+RUNID: _3734jop
+NEW_RUNID: _3734jop
+OLD_RUNID: _3734jop
+PDF: _3734jop.appdf
+USERNAME: 29711
+XMOD: D:\Program Files\ASPEN\Aspen Plus V11.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _3734jop
