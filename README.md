@@ -6,18 +6,11 @@
 项目整体思路：
 - 1.造车
 - - 上电机 520编码电机
-  - ![image](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/62b46ed8-4464-4a9b-aa0e-d1d0f15ce620)
 
 - 2.通讯模块
 - - EB25
 - 3.供电电源
 - - 12V电池盒+稳压模块+5W * 8 的太阳能板
-
----
-### 成员的空余时间表：
-
-![image](https://github.com/Darrenpig/openEuler_Tutorial/assets/121377489/62ed178a-f259-4b1c-b8f7-0bbb3c05b174)
-
 
 这就是近期的大体分工
 
