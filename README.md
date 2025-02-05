@@ -1,6 +1,5 @@
 # Nearlink EB25 SIG
----
-# Nearlink EB25 SIG
+
 ---
 
 ## 项目现状
