@@ -1,6 +1,66 @@
 # Nearlink EB25 SIG
+#### **项目现状**  
+- **初步维护状态**：项目整体分为三大部分：  
+  1. **造车**：使用520编码电机作为动力模块。  
+  2. **通讯模块**：基于EB25实现设备间通信。  
+  3. **供电电源**：采用12V电池盒+稳压模块+5W×8太阳能板组合供电。  
 
 ---
+
+#### **项目成员分工**  
+- **@和尚**：负责ROS开发板配置、PWM控制及电机驱动封装。  
+- **@徐逸凡**：负责硬件采购（如底板、喷涂材料）、底盘组装与调试。  
+- **@徐欣晨**：负责文档维护、Matlab公式验证及竞赛交流。  
+- **@DarrenPig**：仓库维护、环境搭建、进度推动及SDK编译烧录。  
+
+---
+
+#### **协作文档区**  
+- **核心文档**：飞书知识库（[使用手册](https://lierda.feishu.cn/wiki/VBoPwV3oRiJRjWkb1ZkcgVMynmg )、[网址汇总](https://lierda.feishu.cn/wiki/X360wInOjihWzukypNzc0Df5nHf )）。  
+- **ROS开发板资源**：Yahboom ROS驱动板[教程链接](https://www.yahboom.com/study/ROS-Driver-Board )。  
+
+---
+
+#### **项目目标与架构**  
+- **核心目标**：在openEuler和RT-Thread上混合编译Nearlink接口，实现即插即用的Nearlink硬件支持。  
+- **仓库管理**：  
+  - 主仓库：[openeuler-nearlink](https://gitee.com/darrenpig/openeuler-nearlink )，通过更新Readme共享进度与文件。  
+  - **Gitee功能**：支持代码托管、进度跟踪、PR提交及自动化构建检测（参考openEuler社区流程）。  
+
+---
+
+#### **关键进展与里程碑**  
+- **2025年2月5日**：  
+  - **@DarrenPig**需启动imx8的SDK编译烧录；**@徐逸凡**进行材料喷涂。  
+- **历史进度**：  
+  - 4.28：12V电池到位，ROS拓展板用于电机驱动。  
+  - 5.4：建模完成，容器环境就绪。  
+
+---
+
+#### **技术实现与工具链**  
+- **本地环境搭建**：  
+  - 基于openEuler的容器化部署（参考[微信文章](https://mp.weixin.qq.com/s/rg3NYJRQcsNliDUJerOzuw )）。  
+- **硬件选型**：  
+  - 国信长天Cortex-M4开发板、太阳能供电系统。  
+
+---
+
+#### **开源协作流程**  
+1. **代码提交**：通过Gitee仓库克隆、修改、提交PR，遵循openEuler社区的SIG（Special Interest Group）模式。  
+2. **自动化构建**：提交代码后触发CI/CD流水线，自动编译检测（参考src-openeuler项目流程）。  
+3. **文档维护**：Markdown文件渲染至社区官网，提升可读性（如飞书文档与Gitee联动）。  
+
+---
+
+#### **后续计划**  
+- **硬件整合**：完成底盘固定与电机驱动函数封装。  
+- **软件适配**：验证Nearlink接口在RT-Thread的兼容性。  
+- **社区贡献**：将项目成果提交至openEuler第三方仓库（如src-oepkgs）。  
+
+--- 
+
+**注**：项目依赖Gitee的协作功能（如Issue跟踪、PR审核）及openEuler的自动化工具链。
 
 ## 项目现状
 **初步维护状态**  
